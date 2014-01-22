@@ -11,7 +11,7 @@ emailBuild = (grunt) ->
     jade:
       main:
         options:
-          pretty: true
+          pretty: false
         files:
           'src/email.html': 'src/_layout.jade'
     watch:
