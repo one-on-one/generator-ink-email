@@ -17,11 +17,11 @@ InkEmailGenerator.prototype.askFor = ->
   cb      = this.async()
   prompts = []
 
-  prompts.push
-    type: 'confirm'
-    name: 'someOption'
-    message: 'Would you like to?'
-    default: true
+  # prompts.push
+  #   type: 'confirm'
+  #   name: 'someOption'
+  #   message: 'Would you like to?'
+  #   default: true
 
   this.prompt prompts, ((props) ->
     for key, val of props
