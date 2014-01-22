@@ -1,0 +1,13 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-inline-css": "*",
+    "grunt-jade": "*",
+    "grunt-contrib-watch": "*"
+  }
+}
