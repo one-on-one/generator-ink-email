@@ -24,12 +24,6 @@
     var cb, prompts;
     cb = this.async();
     prompts = [];
-    prompts.push({
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to?',
-      "default": true
-    });
     return this.prompt(prompts, (function(props) {
       var key, val;
       for (key in props) {
@@ -46,7 +40,9 @@
     this.copy('_Gruntfile.coffee', 'Gruntfile.coffee');
     this.mkdir('src');
     this.mkdir('build');
-    return this.copy('_email.jade', 'src/email.jade');
+    this.copy('_email.jade', 'src/email.jade');
+    this.copy('_layout.jade', 'src/_layout.jade');
+    return this.copy('_mixins.jade', 'src/_mixins.jade');
   };
 
 }).call(this);

@@ -5,7 +5,7 @@ emailBuild = (grunt) ->
   grunt.initConfig
     inlinecss:
       main:
-        options: {}_email.jade
+        options: {}
         files:
           'build/email.html': 'src/email.html'
     jade:
@@ -13,7 +13,7 @@ emailBuild = (grunt) ->
         options:
           pretty: true
         files:
-          'src/_layout.html': 'src/email.jade'
+          'src/email.html': 'src/_layout.jade'
     watch:
       main:
         files: 'src/email.jade',
@@ -23,10 +23,12 @@ emailBuild = (grunt) ->
           livereload: true
 
   grunt.loadNpmTasks 'grunt-inline-css'
-  grunt.loadNpmTasks 'grunt-jade'
+  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   grunt.registerTask 'build', ['jade:main', 'inlinecss:main']
-  grunt.registerTask 'default', ['watch:main']
+  grunt.registerTask 'watch', ['watch:main']
+
+  grunt.registerTask 'default', ['build']
 
 module.exports = emailBuild

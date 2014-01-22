@@ -40,3 +40,4 @@ InkEmailGenerator.prototype.files = ->
 
   this.copy '_email.jade', 'src/email.jade'
   this.copy '_layout.jade', 'src/_layout.jade'
+  this.copy '_mixins.jade', 'src/_mixins.jade'
